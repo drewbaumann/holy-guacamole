@@ -31,7 +31,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Suzzee & Drew
   location: Location
   social: Around the Web
   credits: Credits
@@ -39,7 +39,7 @@ footer:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
+    url: http://twitter.com/drewbaumann
   - title: facebook
     url:
   - title: stack-overflow
@@ -51,11 +51,11 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: 1314 14th St. Unit 102
+  - line: Santa Monica, CA 90404
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: ''
 
 # Build settings
 markdown: kramdown
