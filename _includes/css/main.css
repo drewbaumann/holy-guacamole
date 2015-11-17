@@ -38,7 +38,8 @@ h6 {
 }
 
 hr.star-light,
-hr.star-primary {
+hr.star-primary,
+hr.gift-light {
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
@@ -48,7 +49,8 @@ hr.star-primary {
 }
 
 hr.star-light:after,
-hr.star-primary:after {
+hr.star-primary:after,
+hr.gift-light:after {
     content: "\f06b";
     display: inline-block;
     position: relative;
@@ -65,6 +67,9 @@ hr.star-light {
 hr.star-light:after {
     color: #fff;
     background-color: #{{ site.color.primary }};
+}
+hr.gift-light:after {
+    color: #fff;
 }
 
 hr.star-primary {
@@ -83,7 +88,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: url("img/flowers.jpg") no-repeat center;
+    background: url("img/flowers_2.jpg") no-repeat center;
 }
 
 header .container {
