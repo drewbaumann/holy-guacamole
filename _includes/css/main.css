@@ -275,7 +275,7 @@ section.success {
     background: #fff;
 }
 
-.btn:hover {
+.btn-success:hover {
   background-color: #{{ site.color.secondary }};
   border-color: #{{ site.color.secondary }};
 }
