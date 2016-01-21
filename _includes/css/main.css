@@ -492,11 +492,11 @@ footer .footer-below {
 #map {
   height: 400px;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 #map div {
   color: black;
-  margin-bottom: 10px;
 }
 
 a.directions-link {
