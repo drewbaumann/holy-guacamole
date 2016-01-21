@@ -32,7 +32,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Suzzee & Drew
+  copyright: Drew & Suzzee
   location: Location
   social: Around the Web
   credits: Credits
@@ -52,7 +52,7 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Los Angeles, CA
+  - line: Santa Monica, CA
 
 # Credits content
 credits: ''

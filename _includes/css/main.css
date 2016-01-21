@@ -26,6 +26,10 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
+a.directions-link:hover {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -39,7 +43,8 @@ h6 {
 
 hr.star-light,
 hr.star-primary,
-hr.gift-light {
+hr.gift-light,
+hr.map-light {
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
@@ -60,6 +65,8 @@ hr.gift-light:after {
     font-size: 2em;
 }
 
+
+
 hr.star-light {
     border-color: #fff;
 }
@@ -68,7 +75,23 @@ hr.star-light:after {
     color: #fff;
     background-color: #{{ site.color.primary }};
 }
-hr.gift-light:after {
+
+hr.map-light:after {
+  content: "\f278";
+  display: inline-block;
+  position: relative;
+  top: -.8em;
+  padding: 0 .25em;
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+
+hr.map-light {
+  border: none;
+}
+
+hr.gift-light:after,
+hr.map-light:after {
     color: #fff;
 }
 
@@ -464,4 +487,20 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+#map div {
+  color: black;
+  margin-bottom: 10px;
+}
+
+a.directions-link {
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
 }

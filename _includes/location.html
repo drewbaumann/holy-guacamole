@@ -1,0 +1,67 @@
+<section class="success" id="location">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Location</h2>
+                <hr class="map-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p>Thanks to our generous neighbors, Barry and Suzie, we will be hosting our baby shower at <a class="directions-link" href="https://www.google.com/maps/dir//Hope+United+LA,+Arizona+Avenue,+Santa+Monica,+CA/@34.0249943,-118.487224,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x80c2a4cade964c19:0xeb4cba56fe7a0e1c!2m2!1d-118.487466!2d34.024927" target="_blank" title="Google Maps directions">Hope United LA</a></p>
+            </div>
+        </div>
+
+    </div>
+    <div id="map"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p>The shower will take place at 2 PM on Sunday January 31</p>
+                <p>Parking is available at the church and by meter on Wilshire Blvd</p>
+                <p>If you live nearby consider Lyft, Uber, or other forms of transit so our friends on the East Side have a place to park</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<script type="text/javascript">
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 34.025105, lng: -118.487316},
+      zoom: 15,
+      scrollwheel: false,
+      styles: [{"featureType":"water","elementType":"all","stylers":[{"hue":"#7fc8ed"},{"saturation":55},{"lightness":-6},{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"hue":"#7fc8ed"},{"saturation":55},{"lightness":-6},{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"hue":"#83cead"},{"saturation":1},{"lightness":-15},{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#f3f4f4"},{"saturation":-84},{"lightness":59},{"visibility":"on"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbbbbb"},{"saturation":-100},{"lightness":26},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#ffcc00"},{"saturation":100},{"lightness":-35},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ffcc00"},{"saturation":100},{"lightness":-22},{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"hue":"#d7e4e4"},{"saturation":-60},{"lightness":23},{"visibility":"on"}]}]
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+
+    service.getDetails({
+      placeId: 'ChIJGUyW3sqkwoARHA56_la6TOs'
+    }, function(place, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        var image = "img/pacifier2.png"
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location,
+          icon: image
+        });
+        console.log(place.photos);
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+            place.formatted_address + '</div>');
+          infowindow.open(map, this);
+        });
+      }
+    });
+  }
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=places">
+</script>
