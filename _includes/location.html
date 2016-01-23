@@ -31,7 +31,7 @@
 <script type="text/javascript">
 
   function initMap() {
-    var isDraggable = $(document).width() > 480 ? true : false;
+    var isDraggable = jQuery(document).width() > 480 ? true : false;
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 34.025105, lng: -118.487316},
       draggable: isDraggable,
@@ -53,7 +53,6 @@
           position: place.geometry.location,
           icon: image
         });
-        console.log(place.photos);
         google.maps.event.addListener(marker, 'click', function() {
           infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
             place.formatted_address + '</div>');
